@@ -32,7 +32,7 @@ const route = (event) => {
 }
 
 const locationHandler = async () => {
-    let location = window.location.pathname;
+    let location = window.location.pathname.slice(window.location.pathname.indexOf('/', 2));
 
     if (location.length === 0) {
         location = '/';
