@@ -1,3 +1,5 @@
+const url = window.location.href;
+
 document.addEventListener('click', (e) => {
     const { target } = e;
     if(!target.matches('header a')) return;
@@ -27,8 +29,7 @@ const routes = {
 const route = (event) => {
     event = event || window.event;
     event.preventDefault();
-
-    window.history.pushState(null, null, `Dynamic-webpages-practice.-Router${event.target.href}`);
+    window.history.pushState({}, '', url+event.target.href);
     locationHandler()
 }
 
