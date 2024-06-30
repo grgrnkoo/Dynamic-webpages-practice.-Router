@@ -10,15 +10,15 @@ const routes = {
         template: './templates/404.html', 
         title: 'Page Not Found | Routing Test'
     },
-    '/Dynamic-webpages-practice.-Router/': {
+    '/': {
         template: './templates/index.html', 
         title: 'Home | Routing Test'
     },
-    '/Dynamic-webpages-practice.-Router/about': {
+    '/about': {
         template: './templates/about.html', 
         title: 'About Us | Routing Test'
     },
-    '/Dynamic-webpages-practice.-Router/contact': {
+    '/contact': {
         template: './templates/contact.html', 
         title: 'Contact Us | Routing Test'
     } 
@@ -28,7 +28,7 @@ const route = (event) => {
     event = event || window.event;
     event.preventDefault();
 
-    window.history.pushState(null, null, event.target.href);
+    window.history.pushState(null, null, `Dynamic-webpages-practice.-Router${event.target.href}`);
     locationHandler()
 }
 
