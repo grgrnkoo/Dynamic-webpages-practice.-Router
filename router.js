@@ -10,15 +10,15 @@ const routes = {
         template: './templates/404.html', 
         title: 'Page Not Found | Routing Test'
     },
-    '/': {
+    '/Dynamic-webpages-practice.-Router/': {
         template: './templates/index.html', 
         title: 'Home | Routing Test'
     },
-    '/about': {
+    '/Dynamic-webpages-practice.-Router/about': {
         template: './templates/about.html', 
         title: 'About Us | Routing Test'
     },
-    '/contact': {
+    '/Dynamic-webpages-practice.-Router/contact': {
         template: './templates/contact.html', 
         title: 'Contact Us | Routing Test'
     } 
