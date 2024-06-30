@@ -1,5 +1,3 @@
-const url = window.location.href;
-
 document.addEventListener('click', (e) => {
     const { target } = e;
     if(!target.matches('header a')) return;
@@ -29,7 +27,7 @@ const routes = {
 const route = (event) => {
     event = event || window.event;
     event.preventDefault();
-    window.history.pushState({}, '', url+event.target.href);
+    window.history.pushState({}, '', event.target.href);
     locationHandler()
 }
 
