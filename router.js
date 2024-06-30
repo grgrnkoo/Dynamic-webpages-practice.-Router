@@ -1,3 +1,5 @@
+const subUrl = window.location.pathname
+
 document.addEventListener('click', (e) => {
     const { target } = e;
     if(!target.matches('header a')) return;
@@ -27,7 +29,7 @@ const routes = {
 const route = (event) => {
     event = event || window.event;
     event.preventDefault();
-    window.history.pushState({}, '', event.target.href);
+    window.history.pushState({}, '', subUrl + event.target.href);
     locationHandler()
 }
 
